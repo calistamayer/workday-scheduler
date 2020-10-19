@@ -129,13 +129,28 @@
 
     <script>
       // print current date at top of calendar
-      var weekday = moment().format('dddd');
-      var date = moment().format('LL');
-      console.log(weekday + ", " + date);
+      var currentDay = moment().format('dddd[,] LL');
+      console.log(currentDay);
       
-      document.getElementById("currentDay").innerHTML = weekday + ", " + date;
+      document.getElementById("currentDay").innerHTML = currentDay;
 
       // color code time blocks
+      var currentHour = Number(moment().format('H'));
+      console.log(currentHour);
+      var taskBoxes = $( "div.col-9" ).toArray();
+      var i
+      for (i = 0; i < taskBoxes.length; i++) {
+        currentTimeBlock = i + 9;
+        if (currentTimeBlock < currentHour) {
+          $( taskBoxes[i] ).addClass( "past" );
+        } else if (currentTimeBlock === currentHour) {
+          $( taskBoxes[i] ).addClass( "present" );
+        } else {
+          $( taskBoxes[i] ).addClass( "future" );
+        }
+      }
+      // console.log(hours[0]);
+
       
 
     </script>
