@@ -27,7 +27,7 @@
       <div class="col hour">
         9AM
       </div>
-      <div class="col-9">
+      <div id="taskBox9" class="col-9">
       </div>
       <div class="col saveBtn">
         <i class="fas fa-save fa-2x"></i>
@@ -37,7 +37,7 @@
       <div class="col hour">
         10AM
       </div>
-      <div class="col-9">
+      <div id="taskBox10" class="col-9">
       </div>
       <div class="col saveBtn">
         <i class="fas fa-save fa-2x"></i>
@@ -47,7 +47,7 @@
       <div class="col hour">
         11AM
       </div>
-      <div class="col-9">
+      <div id="taskBox11" class="col-9">
       </div>
       <div class="col saveBtn">
         <i class="fas fa-save fa-2x"></i>
@@ -57,7 +57,7 @@
       <div class="col hour">
         12PM
       </div>
-      <div class="col-9">
+      <div id="taskBox12" class="col-9">
       </div>
       <div class="col saveBtn">
         <i class="fas fa-save fa-2x"></i>
@@ -67,7 +67,7 @@
       <div class="col hour">
         1PM
       </div>
-      <div class="col-9">
+      <div id="taskBox1" class="col-9">
       </div>
       <div class="col saveBtn">
         <i class="fas fa-save fa-2x"></i>
@@ -77,7 +77,7 @@
       <div class="col hour">
         2PM
       </div>
-      <div class="col-9">
+      <div id="taskBox2" class="col-9">
       </div>
       <div class="col saveBtn">
         <i class="fas fa-save fa-2x"></i>
@@ -87,7 +87,7 @@
       <div class="col hour">
         3PM
       </div>
-      <div class="col-9">
+      <div id="taskBox3" class="col-9">
       </div>
       <div class="col saveBtn">
         <i class="fas fa-save fa-2x"></i>
@@ -97,7 +97,7 @@
       <div class="col hour">
         4PM
       </div>
-      <div class="col-9">
+      <div id="taskBox4" class="col-9">
       </div>
       <div class="col saveBtn">
         <i class="fas fa-save fa-2x"></i>
@@ -107,7 +107,7 @@
       <div class="col hour">
         5PM
       </div>
-      <div class="col-9">
+      <div id="taskBox5" class="col-9">
       </div>
       <div class="col saveBtn">
         <i class="fas fa-save fa-2x"></i>
@@ -140,6 +140,11 @@
           $( taskBoxes[i] ).addClass( "future" );
         }
       }
+
+      // click task box to enter task
+      var taskColumn = document.querySelector("div.col-9");
+      console.dir(taskColumn);
+
     </script>
 </body>
 </html>
