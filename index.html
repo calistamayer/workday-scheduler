@@ -68,6 +68,7 @@
         1PM
       </div>
       <div id="taskBox1" class="col-9">
+        <p></p>
       </div>
       <div class="col saveBtn">
         <i class="fas fa-save fa-2x"></i>
@@ -78,6 +79,7 @@
         2PM
       </div>
       <div id="taskBox2" class="col-9">
+        <p></p>
       </div>
       <div class="col saveBtn">
         <i class="fas fa-save fa-2x"></i>
@@ -88,6 +90,7 @@
         3PM
       </div>
       <div id="taskBox3" class="col-9">
+        <p></p>
       </div>
       <div class="col saveBtn">
         <i class="fas fa-save fa-2x"></i>
@@ -98,6 +101,7 @@
         4PM
       </div>
       <div id="taskBox4" class="col-9">
+        <p></p>
       </div>
       <div class="col saveBtn">
         <i class="fas fa-save fa-2x"></i>
@@ -108,6 +112,7 @@
         5PM
       </div>
       <div id="taskBox5" class="col-9">
+        <p></p>
       </div>
       <div class="col saveBtn">
         <i class="fas fa-save fa-2x"></i>
@@ -142,8 +147,19 @@
       }
 
       // click task box to enter task
-      var taskColumn = document.querySelector("div.col-9");
-      console.dir(taskColumn);
+      $(".container").on("click", "div.col-9", function() {
+        // get current text of time block element
+        var text = $(this)
+          .text()
+          .trim();
+        
+        // replace p element with a new textarea
+        var textInput = $("<textarea>").val(text);
+        $(this).replaceWith(textInput);
+
+        // auto focus new element
+        textInput.trigger("focus");
+      })
 
     </script>
 </body>
